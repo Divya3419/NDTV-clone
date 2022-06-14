@@ -1,7 +1,7 @@
 
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Box, Img } from '../components/styled'
+import { Box, Data, Img } from '../components/styled'
 
 
 const Webstories = () => {
@@ -16,14 +16,14 @@ axios.get("https://newsapi.org/v2/everything?q=Webstories&apiKey=211dd25f3c3042b
     
     },[])
   return (
-    <div>
+    <Data>
         {data.map((ele)=>{
-            return <Box>
+            return <Box key={ele.url}>
                <p>{ele.author}</p> 
                <Img src={ele.urlToImage} alt="" />
                </Box>
         })}
-    </div>
+    </Data>
   )
 }
 

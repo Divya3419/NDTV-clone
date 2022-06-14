@@ -30,7 +30,10 @@ const Navbar = () => {
 </First>
 
 <Sec>
-  <img style={{width:"140%"}} src="https://drop.ndtv.com/homepage/images/ndtvlogo23march.png" alt="" />
+  <img style={{width:"100%"}} src="https://drop.ndtv.com/homepage/images/ndtvlogo23march.png" alt="" />
+<a href="https://twitter.com/ndtv" target="_blank">tw</a>
+<a href="https://www.kooapp.com/profile/ndtv" target="_blank">k00</a>
+<a href="https://www.facebook.com/ndtv?campaign_id=237467320636&funnel_id=882d5833-1471-47ce-84f8-23298555ffe6" target="_blank">face</a>
 
 <Search/>
 </Sec>

@@ -16,8 +16,9 @@ import Auto from './pages/Auto';
 import Swasth from './pages/Swasth';
 import Lifestyle from './pages/Lifestyle';
 import Health from './pages/Health';
-import Shopping from './pages/Shpping';
+import Shopping from './pages/Shopping';
 import Art from './pages/Art';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -41,7 +42,8 @@ function App() {
       <Route path="/art" element={<Art/> }/>
      </Routes>
 
-     <Home/>
+     {/* <Home/> */}
+     <Footer/>
     </div>
   );
 }
