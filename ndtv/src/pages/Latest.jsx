@@ -4,14 +4,14 @@ import React, { useEffect, useState } from 'react'
 import { Box, Data, Img } from '../components/styled'
 
 
-const Tech = () => {
+const Latest = () => {
     const[data,setData]=useState([])
 
     useEffect(() =>{
-axios.get("https://newsapi.org/v2/everything?q=Tech&apiKey=211dd25f3c3042bca11ca86f05becc77")
+axios.get("https://newsapi.org/v2/everything?q=Latest&apiKey=211dd25f3c3042bca11ca86f05becc77")
 .then((r)=>{
     setData(r.data.articles)
-   // console.log(r.data.articles)
+    //console.log(r.data.articles)
 })
     
     },[])
@@ -27,4 +27,4 @@ axios.get("https://newsapi.org/v2/everything?q=Tech&apiKey=211dd25f3c3042bca11ca
   )
 }
 
-export default Tech
+export default Latest
