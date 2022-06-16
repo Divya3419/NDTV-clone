@@ -41,8 +41,20 @@ margin-bottom:20px;
 box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
 
+${props=>props.D1 &&css`
+display:grid;
+grid-template-columns:repeat(3,1fr);
+
+margin-bottom:20px;
+width:80%;
+margin:auto;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+gap:20px;
+`}
+
 `
 export const Box= styled.div`
+
 ${props=>props.B1 && css`
 display:flex;
 margin-bottom:20px;

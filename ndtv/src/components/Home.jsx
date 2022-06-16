@@ -1,11 +1,12 @@
 
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+
 import Business from '../pages/Business'
 import Opinion from '../pages/Opinion'
 import { Img, Data,Box } from './styled'
 import { articles } from '../Data/data'
+import Live from '../pages/Live'
 
 const Home = () => {
     const[data,setData]=useState([])
@@ -14,7 +15,7 @@ const Home = () => {
 
    //big story
     useEffect(() =>{
-axios.get("https://newsapi.org/v2/everything?q=big&pageSize=1&apiKey=797e7f5ba9044447b38bab11a979611c")
+axios.get("https://newsapi.org/v2/everything?q=big&pageSize=3&apiKey=797e7f5ba9044447b38bab11a979611c")
 .then((r)=>{
     setData(r.data.articles)
     //console.log(r.data.articles)
@@ -32,30 +33,27 @@ axios.get("https://newsapi.org/v2/everything?q=big&pageSize=1&apiKey=797e7f5ba90
 
   return (
     <>
-   <div style={{width:"80%",margin:"auto"}}>
-    <Data>
-    <h1>Big story</h1>
+    
+   
+   <h1>Big story</h1>
+    <Data D1>
+    
     
         {data.map((ele)=>{
             return ( 
                 
                <Box key={ele.url}>
-                
+            
              <Img src={ele.urlToImage} alt="" />
           <p>{ele.content}</p>
-          <p>link</p>
           
-               </Box>
-               
-               
-        )})}
         
-    </Data>
-    {data.map((ele)=>{
-        return
+               </Box>
+                )})}
+        </Data>
 
-    })}
-    </div>
+
+
 
     <div style={{width:"80%",margin:"auto"}}>
     <Data>
@@ -72,7 +70,8 @@ axios.get("https://newsapi.org/v2/everything?q=big&pageSize=1&apiKey=797e7f5ba90
     </Data>
     
     </div>
-    <Business/>
+    <Live/>
+     <Business/>
     <Opinion/>
 
     </>
