@@ -1,14 +1,14 @@
 
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Box, Data, Img } from '../components/styled'
+import {H2, Img, Op, Op1 } from '../components/styled'
 
 
 const Opinion = () => {
     const[data,setData]=useState([])
 
     useEffect(() =>{
-axios.get("https://newsapi.org/v2/everything?q=Opinion&apiKey=211dd25f3c3042bca11ca86f05becc77")
+axios.get("https://newsapi.org/v2/everything?q=Opinion&apiKey=797e7f5ba9044447b38bab11a979611c")
 .then((r)=>{
     setData(r.data.articles)
     //console.log(r.data.articles)
@@ -16,14 +16,19 @@ axios.get("https://newsapi.org/v2/everything?q=Opinion&apiKey=211dd25f3c3042bca1
     
     },[])
   return (
-    <Data>
+    <>
+    <H2 >Opinion</H2>
+    <Op>
+      
         {data.map((ele)=>{
-            return <Box key={ele.url}>
-               <p>{ele.author}</p> 
+            return <Op1 key={ele.url}>
+              
                <Img src={ele.urlToImage} alt="" />
-               </Box>
+               <p>{ele.title}</p> 
+               </Op1>
         })}
-    </Data>
+    </Op>
+    </>
   )
 }
 

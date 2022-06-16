@@ -6,6 +6,7 @@ import Search from './Search';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
+
 const Navbar = () => {
   return (
     <div>
@@ -51,7 +52,9 @@ const Navbar = () => {
 </Sec>
 
 </Header>
+
   
+
 
     </div>
   )

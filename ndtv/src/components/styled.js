@@ -24,7 +24,7 @@ margin-bottom:10px;
 export const Sec= styled.div`
 display:grid;
 grid-template-columns:repeat(16,1fr);
-border:2px solid white;
+
 width:90%;
 margin:auto;
 padding:5px;
@@ -34,20 +34,47 @@ padding:5px;
 
 //home
 export const Data=styled.div`
-display:grid;
-grid-template-columns:repeat(3,1fr);
 
-gap:40px;
+width:25%;
+padding:30px;
+margin-bottom:20px;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
 
 `
 export const Box= styled.div`
+${props=>props.B1 && css`
+display:flex;
+margin-bottom:20px;
+
+`}
 
 `
 
 export const Img=styled.img`
-width:50%
+width:100%;
+
+${props=>props.I1 &&css`
+width:30%;
+
+border-radius:6px;
+`}
+`
+//opinion
+
+export const Op= styled.div`
+display:grid;
+grid-template-columns:repeat(4,1fr);
+width:80%;
+margin:auto;
+gap:20px;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 `
 
+export const Op1= styled.div`
+
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+`
 //footer
 
 export const Cover= styled.div`
@@ -63,6 +90,7 @@ margin:auto;
 margin-top:20px;
 display:grid;
 grid-template-columns:20% 76%;
+
 
 
 `
@@ -106,4 +134,11 @@ text-decoration:none;
 font-size:20px;
 color:white;
 `}
+`
+
+export const H2=styled.h2`
+background-color:black;
+
+color:white;
+width:10%;
 `

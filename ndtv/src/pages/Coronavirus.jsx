@@ -1,14 +1,14 @@
 
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Box, Data, Img } from '../components/styled'
+import { Box, Data, H2, Img, Op, Op1 } from '../components/styled'
 
 
 const Coronavirus = () => {
     const[data,setData]=useState([])
 
     useEffect(() =>{
-axios.get("https://newsapi.org/v2/everything?q=Coronavirus&apiKey=211dd25f3c3042bca11ca86f05becc77")
+axios.get("https://newsapi.org/v2/everything?q=Coronavirus&apiKey=797e7f5ba9044447b38bab11a979611c")
 .then((r)=>{
     setData(r.data.articles)
     //console.log(r.data.articles)
@@ -16,14 +16,18 @@ axios.get("https://newsapi.org/v2/everything?q=Coronavirus&apiKey=211dd25f3c3042
     
     },[])
   return (
-    <Data>
+    <>
+    <H2>Corona Virus</H2>
+        <Op>
         {data.map((ele)=>{
-            return <Box key={ele.url}>
-               <p>{ele.author}</p> 
+            return <Op1 key={ele.url}>
+               <p>{ele.title}</p> 
                <Img src={ele.urlToImage} alt="" />
-               </Box>
+               </Op1>
         })}
-    </Data>
+    </Op>
+    </>
+
   )
 }
 

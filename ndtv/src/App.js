@@ -47,7 +47,7 @@ function App() {
            
      </Routes>
 
-     {/* <Home/> */}
+     <Home/>
      <Footer/>
     </div>
   );
