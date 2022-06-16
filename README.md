@@ -1,11 +1,7 @@
-# ndtv.Com
+# ndtv.com
 ## Introduction to our project(https://ndtv.com/ clone):
 
-NDTV is a news Website.
-
-# Work division and working together:
-
-
+# NDTV is a news Website. you can check news like Food,Education,Live,Latest,Cities and etc.
 
 # Tech Stacks Used:
 # ![image](https://user-images.githubusercontent.com/97446828/171631572-e1f0f81e-b026-47bf-a338-41c602dec12f.png)
