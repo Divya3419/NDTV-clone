@@ -5,30 +5,30 @@ import React, { useEffect, useState } from 'react'
 import Business from '../pages/Business'
 import Opinion from '../pages/Opinion'
 import { Img, Data,Box } from './styled'
-import data1 from '../Data/data'
+
 import Live from '../pages/Live'
 
 const Home = () => {
     const[data,setData]=useState([])
     const [top,setTop]=useState([])
     
-    console.log(data1)
+    
 
    //big story
     useEffect(() =>{
-axios.get("https://newsapi.org/v2/everything?q=big&pageSize=3&from=2022-06-16&apiKey=211dd25f3c3042bca11ca86f05becc77")
+axios.get("https://my-server-dna-project.herokuapp.com/home")
 .then((r)=>{
-    setData(r.data.articles)
-    //console.log(r.data.articles)
+    setData(r.data)
+    //console.log(r.data)
 })
     },[])
 
     ///top story
     useEffect(() =>{
-      axios.get("https://newsapi.org/v2/everything?q=top&pageSize=10&from=2022-06-16&apiKey=211dd25f3c3042bca11ca86f05becc77")
+      axios.get("https://my-server-dna-project.herokuapp.com/viral")
       .then((r)=>{
-          setTop(r.data.articles)
-          //console.log(r.data.articles)
+          setTop(r.data)
+          //console.log(r.data)
       })
           },[])
 
