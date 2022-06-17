@@ -20,7 +20,7 @@ console.log("query",q)
    
     return axios({
         method:"GET",
-        url:`https://newsapi.org/v2/everything?q=${q}&pageSize=10&apiKey=797e7f5ba9044447b38bab11a979611c`
+        url:`https://newsapi.org/v2/everything?q=${q}&pageSize=10&apiKey=211dd25f3c3042bca11ca86f05becc77`
        
     })
     .then(res=>{ 
@@ -35,11 +35,7 @@ return (
     <div style={{display:"flex"}}>
        <input type="search" placeholder="Search" onChange={(e)=>setQ(e.target.value)} value={q}/> 
        {collect.map(ele=>(
- <Op1 key={ele.url}>
-               
-<Img src={ele.urlToImage} alt="" />
-<p>{ele.title}</p>
-</Op1>
+ <p>{ele.title}</p>
         
        ))} 
 

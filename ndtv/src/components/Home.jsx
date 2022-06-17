@@ -5,17 +5,18 @@ import React, { useEffect, useState } from 'react'
 import Business from '../pages/Business'
 import Opinion from '../pages/Opinion'
 import { Img, Data,Box } from './styled'
-import { articles } from '../Data/data'
+import data1 from '../Data/data'
 import Live from '../pages/Live'
 
 const Home = () => {
     const[data,setData]=useState([])
     const [top,setTop]=useState([])
-    console.log(articles.id)
+    
+    console.log(data1)
 
    //big story
     useEffect(() =>{
-axios.get("https://newsapi.org/v2/everything?q=big&pageSize=3&apiKey=797e7f5ba9044447b38bab11a979611c")
+axios.get("https://newsapi.org/v2/everything?q=big&pageSize=3&from=2022-06-16&apiKey=211dd25f3c3042bca11ca86f05becc77")
 .then((r)=>{
     setData(r.data.articles)
     //console.log(r.data.articles)
@@ -24,7 +25,7 @@ axios.get("https://newsapi.org/v2/everything?q=big&pageSize=3&apiKey=797e7f5ba90
 
     ///top story
     useEffect(() =>{
-      axios.get("https://newsapi.org/v2/everything?q=top&pageSize=10&apiKey=797e7f5ba9044447b38bab11a979611c")
+      axios.get("https://newsapi.org/v2/everything?q=top&pageSize=10&from=2022-06-16&apiKey=211dd25f3c3042bca11ca86f05becc77")
       .then((r)=>{
           setTop(r.data.articles)
           //console.log(r.data.articles)

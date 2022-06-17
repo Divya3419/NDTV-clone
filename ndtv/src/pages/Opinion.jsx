@@ -8,7 +8,7 @@ const Opinion = () => {
     const[data,setData]=useState([])
 
     useEffect(() =>{
-axios.get("https://newsapi.org/v2/everything?q=Opinion&apiKey=797e7f5ba9044447b38bab11a979611c")
+axios.get("https://newsapi.org/v2/everything?q=Opinion&from=2022-06-16&apiKey=211dd25f3c3042bca11ca86f05becc77")
 .then((r)=>{
     setData(r.data.articles)
     //console.log(r.data.articles)

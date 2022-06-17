@@ -1,7 +1,7 @@
 
 
-
-export const articles= [
+{
+ "articles":[
     {
     "source": {
     "id": null,
@@ -68,3 +68,4 @@ export const articles= [
     "content": "Elon Musk filed a Form 4 with the Securities Exchange Commission, converting his options at Endeavor Group Holdings, Inc. to 7,583 shares on June 13, 2022. \r\nEndeavor Group Holdings, Inc. offers ente… [+1656 chars]"
     }
 ]
+}
