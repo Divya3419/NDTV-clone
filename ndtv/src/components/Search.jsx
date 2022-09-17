@@ -1,39 +1,33 @@
 
-import axios from 'axios'
+import axios, { Axios } from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Img, Op1 } from './styled'
 
 const Search = () => {
-  const[q,setQ]=useState("")
+  const[query,setQuery]=useState("")
   const [collect,setCollect] = useState([])
-console.log("query",q)
+console.log("query",query)
 
   useEffect(() =>{
-    getData()
+    axios.get(`https://newsapi.org/v2/everything?q=${query || `sports`}&apiKey=211dd25f3c3042bca11ca86f05becc77`)
+    .then((r)=>{
+      setCollect(r.data.articles)
+    console.log(r.data.articles)
+    })
+    
 
   },[])
+//console.log(collect)
 
 
-
-  const getData =() =>{
- 
-   
-    return axios({
-        method:"GET",
-        url:`https://newsapi.org/v2/everything?q=${q}&pageSize=10&apiKey=211dd25f3c3042bca11ca86f05becc77`
-       
-    })
-    .then(res=>{ 
-
-      setCollect(res.data.article)
-    })
-    .catch(error=>{
-    console.log(error)
-    })
-}
+  
 return (
-    <div style={{display:"flex"}}>
-       <input type="search" placeholder="Search" onChange={(e)=>setQ(e.target.value)} value={q}/> 
+    <div>
+       <input type="search" 
+       value={query} 
+       placeholder="Search" 
+       onChange={(e)=>setQuery(e.target.value)}/> 
+       
        {collect.map(ele=>(
  <p>{ele.title}</p>
         

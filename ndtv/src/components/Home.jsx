@@ -43,7 +43,7 @@ axios.get("https://my-server-dna-project.herokuapp.com/home")
         {data.map((ele)=>{
             return ( 
                 
-               <Box key={ele.url}>
+               <Box key={ele.urlToImage}>
             
              <Img src={ele.urlToImage} alt="" />
           <p>{ele.content}</p>
@@ -61,7 +61,7 @@ axios.get("https://my-server-dna-project.herokuapp.com/home")
     <h1>Top Stories</h1>
         {top.map((ele)=>{
             return ( 
-               <Box B1 key={ele.url}>
+               <Box B1 key={ele.urlToImage}>
              <Img I1 src={ele.urlToImage} alt="" />
           <p>{ele.title}</p>
                </Box>

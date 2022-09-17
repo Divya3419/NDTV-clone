@@ -20,7 +20,7 @@ axios.get("https://my-server-dna-project.herokuapp.com/latest")
     <H2>Corona Virus</H2>
         <Op>
         {data.map((ele)=>{
-            return <Op1 key={ele.url}>
+            return <Op1 key={ele.urlToImage}>
                <p>{ele.title}</p> 
                <Img src={ele.urlToImage} alt="" />
                </Op1>

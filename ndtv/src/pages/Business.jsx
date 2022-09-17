@@ -24,7 +24,7 @@ axios.get(`https://my-server-dna-project.herokuapp.com/business`)
     <H2>Business</H2>
     <Op>
         {data.map((ele)=>{
-            return <Op1 key={ele.url}>
+            return <Op1 key={ele.urlToImage}>
                
                <Img src={ele.urlToImage} alt="" />
                <p>{ele.title}</p>
